@@ -3,137 +3,426 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>kaoutiz.dev | Développeur web et IA à Toulouse pour les PME</title>
-<meta name="description" content="Bryan Gast, développeur à Toulouse. Sites professionnels, outils métier sur mesure et automatisations IA pour les PME, artisans et cabinets d'Occitanie. Devis forfaitaire, interlocuteur unique.">
-<meta property="og:title" content="kaoutiz.dev | Développeur web et IA à Toulouse">
+<title>kaoutiz.dev | Bryan Gast, développeur web et IA à Toulouse</title>
+<meta name="description" content="Bryan Gast, développeur à Toulouse. Sites professionnels, outils métier sur mesure et automatisations IA pour les PME, artisans et cabinets d'Occitanie. Prix forfaitaire, interlocuteur unique.">
+<meta property="og:title" content="kaoutiz.dev | Bryan Gast, développeur web et IA à Toulouse">
 <meta property="og:description" content="Sites, outils métier et automatisations IA pour les PME toulousaines. Prix forfaitaire, interlocuteur unique.">
 <meta property="og:type" content="website">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%231f4fd8'/%3E%3Ctext x='16' y='22' font-family='Arial' font-weight='700' font-size='17' fill='white' text-anchor='middle'%3Ek%3C/text%3E%3C/svg%3E">
+<meta property="og:image" content="https://kaoutiz2.github.io/logo.webp">
+<link rel="icon" type="image/webp" href="./logo.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"ProfessionalService","name":"kaoutiz.dev","founder":"Bryan Gast","description":"Développement de sites, outils métier et automatisations IA pour les PME","areaServed":["Toulouse","Haute-Garonne","Occitanie"],"address":{"@type":"PostalAddress","addressLocality":"Toulouse","postalCode":"31000","addressCountry":"FR"},"email":"kaoutizoff@gmail.com","url":"https://kaoutiz2.github.io"}
+{"@context":"https://schema.org","@type":"ProfessionalService","name":"kaoutiz.dev","founder":"Bryan Gast","description":"Développement de sites, outils métier et automatisations IA pour les PME","areaServed":["Toulouse","Haute-Garonne","Occitanie"],"address":{"@type":"PostalAddress","addressLocality":"Toulouse","postalCode":"31000","addressCountry":"FR"},"email":"kaoutizoff@gmail.com","url":"https://kaoutiz2.github.io","image":"https://kaoutiz2.github.io/logo.webp"}
 </script>
 <style>
-:root{--bg:#fbfbfd;--surface:#fff;--ink:#14161c;--muted:#5a6070;--line:#e6e8ee;--accent:#1f4fd8;--accent-ink:#fff;--soft:#eef2fd}
-@media (prefers-color-scheme:dark){:root{--bg:#0e1015;--surface:#161922;--ink:#eef0f5;--muted:#a3a9b8;--line:#262b38;--accent:#6b8cff;--accent-ink:#0e1015;--soft:#1a2134}}
+:root{
+  --navy:#111425;--navy2:#181c33;--navy3:#222844;
+  --cyan:#009bcf;--violet:#6b4fb8;--magenta:#b944b1;
+  --grad:linear-gradient(90deg,#009bcf 0%,#6b4fb8 55%,#b944b1 100%);
+  --ink:#151829;--muted:#5d6278;--line:#e4e7f0;--bg:#f5f7fc;--white:#fff;
+}
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6;font-size:17px}
-a{color:var(--accent)}
-.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
-header{position:sticky;top:0;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);z-index:10}
-header .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
-.logo{font-weight:800;font-size:20px;text-decoration:none;color:var(--ink);letter-spacing:-.02em}
-.logo span{color:var(--accent)}
-nav a{color:var(--muted);text-decoration:none;margin-left:22px;font-size:15px}
-nav a:hover{color:var(--ink)}
-.btn{display:inline-block;background:var(--accent);color:var(--accent-ink);padding:13px 22px;border-radius:10px;text-decoration:none;font-weight:600}
-.btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--line)}
-.hero{padding:88px 20px 64px}
-.tag{display:inline-block;background:var(--soft);color:var(--accent);padding:5px 12px;border-radius:99px;font-size:14px;font-weight:600;margin-bottom:20px}
-h1{font-size:clamp(32px,5vw,52px);line-height:1.12;letter-spacing:-.03em;max-width:820px}
-.lead{font-size:clamp(18px,2.2vw,21px);color:var(--muted);max-width:680px;margin:22px 0 32px}
-.cta{display:flex;gap:12px;flex-wrap:wrap}
-.proof{display:flex;gap:28px;flex-wrap:wrap;margin-top:44px;color:var(--muted);font-size:15px}
-.proof b{display:block;color:var(--ink);font-size:24px}
-section{padding:72px 0;border-top:1px solid var(--line)}
-h2{font-size:clamp(26px,3.4vw,36px);letter-spacing:-.02em;margin-bottom:12px}
-.sub{color:var(--muted);max-width:640px;margin-bottom:36px}
-.grid{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}.grid.four{grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
-.card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:26px}
-.card h3{font-size:20px;margin-bottom:8px}
-.card p{color:var(--muted);font-size:16px}
-.card ul{list-style:none;margin:14px 0;color:var(--muted);font-size:15px}
-.card li{padding:4px 0 4px 22px;position:relative}
-.card li:before{content:"✓";position:absolute;left:0;color:var(--accent);font-weight:700}
-.price{margin-top:16px;font-weight:700;color:var(--ink)}
-.price small{color:var(--muted);font-weight:400}
-.steps{counter-reset:s}
-.steps .card h3:before{counter-increment:s;content:counter(s);display:inline-grid;place-items:center;width:30px;height:30px;border-radius:50%;background:var(--soft);color:var(--accent);font-size:15px;margin-right:10px}
-.contact{background:var(--soft);border-radius:18px;padding:44px;text-align:center}
-.contact p{color:var(--muted);max-width:560px;margin:10px auto 26px}
-footer{padding:36px 0 48px;color:var(--muted);font-size:14px;border-top:1px solid var(--line)}
-footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
-details{margin-top:14px}
-summary{cursor:pointer}
-.legal{margin-top:10px;font-size:13px;line-height:1.7}
-@media (max-width:640px){nav a:not(.btn){display:none}.hero{padding:56px 20px 40px}section{padding:52px 0}.contact{padding:30px 18px}}
+body{font-family:Poppins,system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.65;font-size:16px;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit}
+.wrap{max-width:1140px;margin:0 auto;padding:0 20px}
+.grad-text{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hex{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='97' viewBox='0 0 56 97'%3E%3Cg fill='none' stroke='%23009bcf' stroke-opacity='.16' stroke-width='1.2'%3E%3Cpath d='M28 1 54 16v30L28 61 2 46V16z'/%3E%3Cpath d='M28 61v36M2 46 0 47M54 46l2 1'/%3E%3C/g%3E%3C/svg%3E")}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:14px 24px;border-radius:12px;font-weight:600;text-decoration:none;font-size:15px;transition:transform .15s,box-shadow .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn-grad{background:var(--grad);color:#fff;box-shadow:0 10px 30px -10px rgba(185,68,177,.6)}
+.btn-ghost{border:1.5px solid rgba(255,255,255,.25);color:#fff}
+.btn-ghost:hover{border-color:#fff}
+.title{font-size:clamp(28px,4vw,42px);font-weight:700;letter-spacing:-.02em;line-height:1.15}
+.title .us{color:var(--magenta)}
+.kicker{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--cyan);margin-bottom:14px}
+.kicker:before{content:"";width:22px;height:3px;border-radius:3px;background:var(--grad)}
+.lead{color:var(--muted);max-width:640px;margin-top:14px;font-size:17px}
+
+/* header */
+header{position:fixed;inset:0 0 auto;z-index:50;transition:background .25s,box-shadow .25s}
+header.scrolled{background:rgba(17,20,37,.92);backdrop-filter:blur(10px);box-shadow:0 6px 30px rgba(0,0,0,.25)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:74px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none}
+.brand img{width:40px;height:40px}
+.brand .wm{height:17px;width:auto}
+.nav nav{display:flex;align-items:center;gap:28px}
+.nav nav a{color:rgba(255,255,255,.75);text-decoration:none;font-size:14px;font-weight:500}
+.nav nav a:hover{color:#fff}
+.nav nav .btn{padding:10px 18px;color:#fff}
+
+/* hero */
+.hero{position:relative;background:var(--navy);color:#fff;padding:150px 0 110px;overflow:hidden}
+.hero .hex{position:absolute;inset:0;opacity:.9;mask-image:radial-gradient(ellipse at 20% 30%,#000 10%,transparent 65%);-webkit-mask-image:radial-gradient(ellipse at 20% 30%,#000 10%,transparent 65%)}
+.blob{position:absolute;border-radius:50%;filter:blur(90px);opacity:.55}
+.b1{width:520px;height:520px;background:#009bcf;right:-140px;top:-120px}
+.b2{width:460px;height:460px;background:#b944b1;right:120px;bottom:-260px;opacity:.45}
+.b3{width:300px;height:300px;background:#6b4fb8;left:-120px;bottom:-80px;opacity:.35}
+.hero-grid{position:relative;display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center}
+.pill-top{display:inline-flex;align-items:center;gap:10px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);padding:7px 14px 7px 8px;border-radius:99px;font-size:13px;margin-bottom:26px}
+.pill-top b{background:var(--grad);padding:3px 10px;border-radius:99px;font-weight:600;font-size:12px}
+.hero h1{font-size:clamp(34px,4.7vw,56px);line-height:1.08;font-weight:800;letter-spacing:-.03em}
+.hero p.sub{color:rgba(255,255,255,.72);font-size:clamp(16px,1.6vw,19px);max-width:560px;margin:24px 0 34px}
+.hero .cta{display:flex;gap:14px;flex-wrap:wrap}
+.stats{display:flex;gap:14px;flex-wrap:wrap;margin-top:46px}
+.stat{border:1.5px solid transparent;border-radius:14px;padding:12px 18px;background:linear-gradient(var(--navy2),var(--navy2)) padding-box,var(--grad) border-box;min-width:150px}
+.stat b{display:block;font-size:22px;font-weight:700}
+.stat span{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.6)}
+.portrait{position:relative;justify-self:center;width:min(420px,100%);aspect-ratio:1}
+.ring{position:absolute;border-radius:50%;border:5px solid transparent}
+.r1{inset:0;border-color:var(--cyan);border-right-color:transparent;transform:rotate(-30deg);animation:spin 26s linear infinite}
+.r2{inset:16px;border-color:var(--magenta);border-right-color:transparent;transform:rotate(-20deg);animation:spin 34s linear infinite reverse}
+.r3{inset:32px;border-color:var(--cyan);border-right-color:transparent;opacity:.8;animation:spin 42s linear infinite}
+@keyframes spin{to{transform:rotate(330deg)}}
+@media (prefers-reduced-motion:reduce){.ring{animation:none}}
+.photo{position:absolute;inset:52px;border-radius:50%;overflow:hidden;background:var(--navy3);box-shadow:0 30px 60px -20px rgba(0,0,0,.6)}
+.photo img{width:100%;height:100%;object-fit:cover;object-position:50% 18%}
+.float{position:absolute;background:#fff;color:var(--ink);border-radius:14px;padding:10px 14px;font-size:13px;font-weight:600;display:flex;align-items:center;gap:10px;box-shadow:0 18px 40px -12px rgba(0,0,0,.45)}
+.float i{width:30px;height:30px;border-radius:9px;background:var(--grad);display:grid;place-items:center;color:#fff;font-style:normal;font-size:15px}
+.float small{display:block;font-weight:400;color:var(--muted);font-size:11px}
+.f1{left:-28px;bottom:58px}
+.f2{right:-18px;top:46px}
+
+/* stack strip */
+.stack{background:var(--navy2);color:rgba(255,255,255,.7);padding:22px 0;border-top:1px solid rgba(255,255,255,.06)}
+.stack .wrap{display:flex;align-items:center;gap:12px;flex-wrap:wrap;justify-content:center}
+.stack span.lab{font-size:12px;letter-spacing:.12em;text-transform:uppercase;margin-right:8px;color:rgba(255,255,255,.5)}
+.chip{border:1px solid rgba(255,255,255,.14);border-radius:8px;padding:5px 12px;font-size:13px;font-weight:500;color:#fff;background:rgba(255,255,255,.04)}
+
+section{padding:100px 0}
+
+/* services */
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:50px}
+.card{position:relative;background:#fff;border:1px solid var(--line);border-radius:20px;padding:30px;display:flex;flex-direction:column;transition:transform .2s,box-shadow .2s}
+.card:hover{transform:translateY(-4px);box-shadow:0 24px 50px -24px rgba(17,20,37,.25)}
+.card.hl{border:2px solid transparent;background:linear-gradient(#fff,#fff) padding-box,var(--grad) border-box}
+.badge{position:absolute;top:-13px;left:30px;background:var(--grad);color:#fff;font-size:12px;font-weight:600;padding:4px 12px;border-radius:99px}
+.ico{width:54px;height:54px;border-radius:15px;display:grid;place-items:center;background:linear-gradient(135deg,rgba(0,155,207,.12),rgba(185,68,177,.14));margin-bottom:20px}
+.ico svg{width:28px;height:28px}
+.card h3{font-size:20px;font-weight:700;margin-bottom:8px}
+.card p{color:var(--muted);font-size:15px}
+.card ul{list-style:none;margin:18px 0 22px;font-size:14px;color:var(--ink)}
+.card li{padding:5px 0 5px 28px;position:relative}
+.card li:before{content:"";position:absolute;left:0;top:9px;width:17px;height:17px;border-radius:50%;background:var(--grad) ;-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Ccircle cx='10' cy='10' r='10'/%3E%3C/svg%3E");}
+.card li:after{content:"";position:absolute;left:5px;top:13px;width:7px;height:4px;border:2px solid #fff;border-top:0;border-right:0;transform:rotate(-45deg)}
+.price{margin-top:auto;padding-top:18px;border-top:1px dashed var(--line)}
+.price b{font-size:24px;font-weight:700}
+.price small{color:var(--muted);font-size:13px;display:block}
+.price .alt{font-size:14px;color:var(--muted);margin-top:6px}
+.price .alt b{font-size:15px;color:var(--ink)}
+
+/* work */
+.work{background:var(--navy);color:#fff;position:relative;overflow:hidden}
+.work .hex{position:absolute;inset:0;opacity:.6;mask-image:linear-gradient(180deg,transparent,#000 30%,#000 70%,transparent);-webkit-mask-image:linear-gradient(180deg,transparent,#000 30%,#000 70%,transparent)}
+.work .lead{color:rgba(255,255,255,.65)}
+.proj{position:relative;display:grid;grid-template-columns:repeat(2,1fr);gap:24px;margin-top:50px}
+.pj{background:var(--navy2);border:1px solid rgba(255,255,255,.08);border-radius:22px;overflow:hidden;display:flex;flex-direction:column}
+.vis{height:230px;position:relative;overflow:hidden;background:linear-gradient(135deg,#1c2142,#141830)}
+.pj .txt{padding:24px 26px 28px}
+.tag{display:inline-block;font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--cyan);margin-bottom:8px}
+.pj h3{font-size:19px;font-weight:600;margin-bottom:8px}
+.pj p{color:rgba(255,255,255,.65);font-size:14.5px}
+.pj .tech{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
+.pj .tech span{font-size:12px;border:1px solid rgba(255,255,255,.14);padding:3px 10px;border-radius:7px;color:rgba(255,255,255,.8)}
+/* visual 1: medical flow */
+.flow{position:absolute;inset:0;display:flex;align-items:center;justify-content:space-around;padding:0 18px}
+.node{width:92px;text-align:center;font-size:11px;color:rgba(255,255,255,.8);position:relative;z-index:2}
+.node .c{width:62px;height:62px;margin:0 auto 8px;border-radius:18px;display:grid;place-items:center;background:#fff;box-shadow:0 10px 30px -8px rgba(0,155,207,.6)}
+.node.mid .c{width:78px;height:78px;background:var(--grad);border-radius:22px}
+.node svg{width:30px;height:30px}
+.wire{position:absolute;top:50%;left:12%;right:12%;height:2px;margin-top:-14px;background:repeating-linear-gradient(90deg,var(--cyan) 0 8px,transparent 8px 14px);z-index:1;animation:dash 1.2s linear infinite}
+@keyframes dash{to{background-position:14px 0}}
+.lock{position:absolute;top:26px;right:26px;font-size:11px;background:rgba(0,155,207,.15);border:1px solid rgba(0,155,207,.4);color:#7fd6f3;padding:4px 10px;border-radius:99px}
+/* visual 2: erp dashboard */
+.dash{position:absolute;left:26px;right:26px;top:28px;bottom:-20px;background:#fff;border-radius:12px 12px 0 0;display:grid;grid-template-columns:70px 1fr;overflow:hidden;box-shadow:0 20px 50px -10px rgba(0,0,0,.5)}
+.dash .side{background:#1b1f3a;padding:14px 10px;display:flex;flex-direction:column;gap:9px}
+.dash .side i{height:7px;border-radius:4px;background:rgba(255,255,255,.18)}
+.dash .side i:first-child{background:var(--grad);height:18px;width:18px;border-radius:6px;margin-bottom:6px}
+.dash .main{padding:14px;display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:42px 1fr;gap:10px}
+.kpi{border:1px solid #eceef5;border-radius:8px;padding:6px 8px;font-size:9px;color:#8a8fa5}
+.kpi b{display:block;font-size:14px;color:#151829}
+.chart{grid-column:1/3;border:1px solid #eceef5;border-radius:8px;display:flex;align-items:flex-end;gap:7px;padding:10px}
+.chart i{flex:1;border-radius:4px 4px 0 0;background:var(--grad)}
+.list{border:1px solid #eceef5;border-radius:8px;padding:8px;display:flex;flex-direction:column;gap:7px}
+.list i{height:8px;border-radius:4px;background:#eef0f7}
+.list i:nth-child(odd){width:70%}
+/* visual 3: ai chat */
+.chat{position:absolute;inset:24px 34px;display:flex;flex-direction:column;gap:12px;justify-content:center}
+.msg{max-width:78%;padding:10px 14px;border-radius:14px;font-size:12.5px;line-height:1.45}
+.msg.u{align-self:flex-end;background:#fff;color:#151829;border-bottom-right-radius:4px}
+.msg.a{background:var(--grad);border-bottom-left-radius:4px}
+.typing{display:flex;gap:4px;padding:12px 14px;background:rgba(255,255,255,.08);border-radius:14px;width:max-content}
+.typing i{width:6px;height:6px;border-radius:50%;background:#fff;opacity:.5;animation:blink 1.2s infinite}
+.typing i:nth-child(2){animation-delay:.2s}.typing i:nth-child(3){animation-delay:.4s}
+@keyframes blink{50%{opacity:1}}
+/* visual 4: phone */
+.phones{position:absolute;inset:0;display:flex;justify-content:center;align-items:flex-end;gap:18px}
+.phone{width:118px;height:214px;border-radius:22px;background:#0b0d19;border:3px solid #2a3054;padding:10px 8px;position:relative;bottom:-22px;box-shadow:0 20px 40px -10px rgba(0,0,0,.6)}
+.phone.p2{height:190px;bottom:-30px;transform:rotate(6deg)}
+.phone .scr{height:100%;border-radius:14px;background:#f4f6fb;padding:10px 8px;display:flex;flex-direction:column;gap:7px}
+.phone .scan{height:76px;border-radius:10px;border:2px dashed var(--cyan);display:grid;place-items:center;color:var(--cyan);font-size:10px;font-weight:600}
+.phone .row{height:22px;border-radius:7px;background:#fff;border:1px solid #e6e8f0;display:flex;align-items:center;gap:5px;padding:0 6px}
+.phone .row:before{content:"";width:10px;height:10px;border-radius:3px;background:var(--grad)}
+.phone .row:after{content:"";flex:1;height:5px;border-radius:3px;background:#e6e8f0}
+.phone .bt{margin-top:auto;height:24px;border-radius:8px;background:var(--grad)}
+
+/* about */
+.about{display:grid;grid-template-columns:.8fr 1.2fr;gap:64px;align-items:center}
+.about-photo{position:relative;border-radius:26px;overflow:hidden;aspect-ratio:3/4;box-shadow:0 30px 60px -30px rgba(17,20,37,.5)}
+.about-photo img{width:100%;height:100%;object-fit:cover}
+.about-photo:after{content:"";position:absolute;inset:auto 0 0;height:40%;background:linear-gradient(transparent,rgba(17,20,37,.85))}
+.about-photo .cap{position:absolute;left:22px;bottom:20px;z-index:2;color:#fff}
+.about-photo .cap b{display:block;font-size:20px}
+.about-photo .cap span{font-size:13px;opacity:.8}
+.about p{color:var(--muted);margin-top:16px}
+.about p strong{color:var(--ink)}
+.timeline{margin-top:30px;border-left:2px solid var(--line);padding-left:24px;display:flex;flex-direction:column;gap:18px}
+.tl{position:relative}
+.tl:before{content:"";position:absolute;left:-32px;top:6px;width:14px;height:14px;border-radius:50%;background:var(--grad);box-shadow:0 0 0 4px var(--bg)}
+.tl b{font-size:15px}
+.tl span{display:block;font-size:13px;color:var(--muted)}
+.tl em{font-style:normal;font-size:12px;font-weight:600;color:#fff;background:var(--violet);padding:2px 9px;border-radius:99px;margin-left:8px}
+
+/* method */
+.method{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin-top:50px;position:relative}
+.steps:before{content:"";position:absolute;top:28px;left:8%;right:8%;height:2px;background:var(--grad);opacity:.35}
+.step{position:relative;text-align:center;padding:0 8px}
+.step .n{width:56px;height:56px;margin:0 auto 18px;border-radius:50%;display:grid;place-items:center;font-weight:700;font-size:20px;color:#fff;background:var(--grad);box-shadow:0 0 0 8px #fff,0 14px 30px -10px rgba(107,79,184,.7)}
+.step h3{font-size:17px;font-weight:600;margin-bottom:6px}
+.step p{font-size:14px;color:var(--muted)}
+
+/* cta */
+.cta-band{position:relative;background:var(--navy);color:#fff;border-radius:28px;padding:64px 56px;overflow:hidden;display:grid;grid-template-columns:1.3fr .7fr;gap:30px;align-items:center}
+.cta-band .blob{opacity:.5}
+.cta-band h2{position:relative;font-size:clamp(28px,3.6vw,40px);line-height:1.15;font-weight:700}
+.cta-band p{position:relative;color:rgba(255,255,255,.7);margin:14px 0 28px;max-width:520px}
+.cta-band .cta{position:relative;display:flex;gap:14px;flex-wrap:wrap}
+.cta-band .logo-big{position:relative;justify-self:center;width:220px;opacity:.95}
+
+footer{padding:40px 0 50px;color:var(--muted);font-size:14px}
+footer .row{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+footer .brand img{width:30px;height:30px}
+footer a{color:var(--muted)}
+details{margin-top:18px}
+summary{cursor:pointer;font-size:13px}
+.legal{margin-top:10px;font-size:12.5px;line-height:1.8}
+
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none}}
+
+@media (max-width:960px){
+  .hero-grid,.about,.cta-band{grid-template-columns:1fr}
+  .portrait{width:min(320px,90%);margin-top:20px}
+  .cards{grid-template-columns:1fr}
+  .proj{grid-template-columns:1fr}
+  .steps{grid-template-columns:1fr 1fr;row-gap:40px}
+  .steps:before{display:none}
+  .cta-band{padding:44px 26px}
+  .cta-band .logo-big{display:none}
+  .about-photo{max-width:380px}
+}
+@media (max-width:640px){
+  .nav nav a:not(.btn){display:none}
+  .hero{padding:120px 0 80px}
+  section{padding:70px 0}
+  .stat{min-width:0;flex:1;padding:10px 12px}.stat b{font-size:19px}.stat span{font-size:9.5px;letter-spacing:.04em}
+  .f1{left:-6px}.f2{right:-6px}
+  .steps{grid-template-columns:1fr}
+  .vis{height:210px}
+  .flow .node{width:76px}
+}
 </style>
 </head>
 <body>
-<header><div class="wrap">
-  <a class="logo" href="#">kaoutiz<span>.dev</span></a>
-  <nav><a href="#services">Services</a><a href="#realisations">Réalisations</a><a href="#methode">Méthode</a><a class="btn" href="#contact" style="padding:9px 16px;margin-left:22px">Me contacter</a></nav>
+
+<header id="top"><div class="wrap nav">
+  <a class="brand" href="#" aria-label="kaoutiz.dev, accueil"><img src="./logo.webp" alt="" width="40" height="40"><img class="wm" src="./wordmark.svg" alt="kaoutiz.dev"></a>
+  <nav><a href="#services">Services</a><a href="#realisations">Réalisations</a><a href="#apropos">À propos</a><a class="btn btn-grad" href="#contact">Me contacter</a></nav>
 </div></header>
 
 <main>
-<div class="wrap hero">
-  <span class="tag">Développeur indépendant à Toulouse</span>
-  <h1>Des outils numériques simples qui font gagner du temps à votre entreprise.</h1>
-  <p class="lead">Site professionnel, logiciel métier sur mesure ou automatisation avec l'IA : je conçois, je développe et je vous accompagne. Un seul interlocuteur, un prix fixé à l'avance.</p>
-  <div class="cta"><a class="btn" href="#contact">Échanger 20 minutes, gratuitement</a><a class="btn ghost" href="#services">Voir les services</a></div>
-  <div class="proof"><div><b>4 ans</b>de développement en entreprise</div><div><b>Master IA</b>Epitech Toulouse</div><div><b>Forfait</b>pas de mauvaise surprise</div></div>
-</div>
+<section class="hero">
+  <div class="hex"></div><div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div>
+  <div class="wrap hero-grid">
+    <div>
+      <div class="pill-top"><b>Toulouse</b> Développeur indépendant, disponible pour vos projets</div>
+      <h1>Des outils numériques <span class="grad-text">simples</span> qui font gagner du temps à votre entreprise.</h1>
+      <p class="sub">Site professionnel, logiciel métier sur mesure ou automatisation avec l'IA. Je conçois, je développe et je vous accompagne, avec un seul interlocuteur et un prix fixé à l'avance.</p>
+      <div class="cta">
+        <a class="btn btn-grad" href="#contact">Échanger 20 minutes, gratuitement <span aria-hidden="true">→</span></a>
+        <a class="btn btn-ghost" href="#realisations">Voir mes réalisations</a>
+      </div>
+      <div class="stats">
+        <div class="stat"><b>4 ans</b><span>d'expérience en dev</span></div>
+        <div class="stat"><b>Bac+5</b><span>Master IA, Epitech</span></div>
+        <div class="stat"><b>Forfait</b><span>prix fixé à l'avance</span></div>
+      </div>
+    </div>
+    <div class="portrait">
+      <div class="ring r1"></div><div class="ring r2"></div><div class="ring r3"></div>
+      <div class="photo"><img src="./bryan.webp" alt="Bryan Gast, développeur à Toulouse" width="420" height="560"></div>
+      <div class="float f1"><i>✓</i><div>ERP santé et assurance<small>2 ans et demi chez Strateg.in</small></div></div>
+      <div class="float f2"><i>★</i><div>Master IA<small>Epitech Toulouse</small></div></div>
+    </div>
+  </div>
+</section>
+
+<div class="stack"><div class="wrap">
+  <span class="lab">Ma stack</span>
+  <span class="chip">React</span><span class="chip">Next.js</span><span class="chip">TypeScript</span><span class="chip">Node.js</span><span class="chip">Python</span><span class="chip">PHP</span><span class="chip">React Native</span><span class="chip">APIs LLM</span><span class="chip">Docker</span><span class="chip">Kubernetes</span>
+</div></div>
 
 <section id="services"><div class="wrap">
-  <h2>Ce que je fais pour les PME</h2>
-  <p class="sub">Artisans, cabinets, commerces, PME de services : vous n'avez pas d'équipe technique, je deviens la vôtre, le temps d'un projet ou dans la durée.</p>
-  <div class="grid">
-    <div class="card"><h3>Site professionnel</h3><p>Un site rapide, clair et lisible sur mobile, pensé pour être trouvé sur Google à Toulouse et pour transformer les visiteurs en demandes de devis.</p>
-      <ul><li>Design sur mesure et adapté au mobile</li><li>Référencement local (Google)</li><li>Formulaire de contact ou prise de rendez vous</li><li>Vous restez propriétaire du site</li><li>Hébergement et maintenance en option : 49 € par mois</li></ul>
-      <p class="price">Site essentiel : 900 € <small>HT, 1 à 3 pages, en ligne en 2 semaines</small></p>
-      <p class="price" style="margin-top:4px">Site sur mesure : dès 1 800 € <small>HT</small></p></div>
-    <div class="card"><h3>Outil métier sur mesure</h3><p>Fini les fichiers Excel éparpillés : un logiciel à votre image pour gérer clients, devis, factures, planning, stocks ou interventions.</p>
-      <ul><li>Accessible depuis ordinateur et téléphone</li><li>Accès par rôle pour chaque collaborateur</li><li>Tableaux de bord et exports</li><li>Livré par étapes, utilisable rapidement</li></ul>
-      <p class="price">À partir de 3 000 € <small>HT, forfait</small></p></div>
-    <div class="card"><h3>Automatisation et IA</h3><p>Les tâches répétitives qui vous prennent des heures chaque semaine, confiées à la machine : de façon concrète et mesurable.</p>
-      <ul><li>Tri et réponses aux emails, relances automatiques</li><li>Génération de devis et documents</li><li>Connexion entre vos logiciels</li><li>Assistant IA formé sur vos propres documents</li></ul>
-      <p class="price">À partir de 800 € <small>HT, forfait</small></p></div>
+  <div class="reveal">
+    <div class="kicker">Services</div>
+    <h2 class="title">Ce que je fais pour les PME<span class="us"> _</span></h2>
+    <p class="lead">Artisans, cabinets, commerces, PME de services : vous n'avez pas d'équipe technique, je deviens la vôtre, le temps d'un projet ou dans la durée.</p>
+  </div>
+  <div class="cards">
+    <div class="card hl reveal"><span class="badge">Le plus demandé</span>
+      <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="url(#g)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><defs><linearGradient id="g" x1="0" x2="1"><stop offset="0" stop-color="#009bcf"/><stop offset="1" stop-color="#b944b1"/></linearGradient></defs><rect x="2" y="4" width="20" height="14" rx="2"/><path d="M8 21h8M12 18v3M2 8h20"/></svg></div>
+      <h3>Site professionnel</h3>
+      <p>Un site rapide, clair et lisible sur mobile, pensé pour être trouvé sur Google à Toulouse et pour transformer les visiteurs en demandes de devis.</p>
+      <ul><li>Design sur mesure, adapté au mobile</li><li>Référencement local (Google)</li><li>Formulaire de contact ou prise de rendez vous</li><li>Vous restez propriétaire du site</li></ul>
+      <div class="price"><small>Site essentiel, 1 à 3 pages, en ligne en 2 semaines</small><b>900 € HT</b><div class="alt">Site sur mesure : <b>dès 1 800 € HT</b> · maintenance 49 €/mois</div></div>
+    </div>
+    <div class="card reveal">
+      <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="url(#g)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="9" rx="1.5"/><rect x="14" y="3" width="7" height="5" rx="1.5"/><rect x="14" y="12" width="7" height="9" rx="1.5"/><rect x="3" y="16" width="7" height="5" rx="1.5"/></svg></div>
+      <h3>Outil métier sur mesure</h3>
+      <p>Fini les fichiers Excel éparpillés : un logiciel à votre image pour gérer clients, devis, factures, planning, stocks ou interventions.</p>
+      <ul><li>Accessible sur ordinateur et téléphone</li><li>Accès par rôle pour chaque collaborateur</li><li>Tableaux de bord et exports</li><li>Livré par étapes, utilisable vite</li></ul>
+      <div class="price"><small>Forfait selon votre besoin</small><b>dès 3 000 € HT</b></div>
+    </div>
+    <div class="card reveal">
+      <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="url(#g)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v3M12 19v3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M2 12h3M19 12h3M4.9 19.1 7 17M17 7l2.1-2.1"/><circle cx="12" cy="12" r="4"/></svg></div>
+      <h3>Automatisation et IA</h3>
+      <p>Les tâches répétitives qui vous prennent des heures chaque semaine, confiées à la machine, de façon concrète et mesurable.</p>
+      <ul><li>Tri et réponses aux emails, relances</li><li>Génération de devis et documents</li><li>Connexion entre vos logiciels</li><li>Assistant IA formé sur vos documents</li></ul>
+      <div class="price"><small>Forfait selon votre besoin</small><b>dès 800 € HT</b></div>
+    </div>
   </div>
 </div></section>
 
-<section id="realisations"><div class="wrap">
-  <h2>Quelques réalisations</h2>
-  <p class="sub">Des projets menés en entreprise et pour des clients, avec des exigences fortes de fiabilité et de sécurité.</p>
-  <div class="grid four">
-    <div class="card"><h3>Plateforme de données médicales</h3><p>Échange sécurisé de données entre fabricants d'implants, praticiens et Assurance Maladie. Chiffrement, contrôle d'accès, traçabilité, conformité RGPD et HDS.</p></div>
-    <div class="card"><h3>Logiciels de gestion sur mesure</h3><p>ERP pour des clients de l'assurance et de la santé, puis un logiciel permettant de créer ses propres outils de gestion sans coder, avec un assistant IA intégré.</p></div>
-    <div class="card"><h3>Application Windows pour un groupe gaming</h3><p>Bibliothèque de jeux avec connexion sécurisée, droits par rôle, téléchargement et vérification de licence. Livrée au forfait, par étapes.</p></div>
-    <div class="card"><h3>Application mobile de numérisation</h3><p>Scan de documents depuis le téléphone avec envoi automatique vers le cloud, couplé à un outil de facturation et de planning.</p></div>
+<section class="work" id="realisations">
+  <div class="hex"></div>
+  <div class="wrap" style="position:relative">
+    <div class="reveal">
+      <div class="kicker">Réalisations</div>
+      <h2 class="title">Des projets exigeants, livrés<span class="us"> _</span></h2>
+      <p class="lead">Menés en entreprise et pour des clients, avec de vraies contraintes de fiabilité, de sécurité et de délais.</p>
+    </div>
+    <div class="proj">
+      <article class="pj reveal">
+        <div class="vis">
+          <span class="lock">Chiffré de bout en bout</span>
+          <div class="wire"></div>
+          <div class="flow">
+            <div class="node"><div class="c"><svg viewBox="0 0 24 24" fill="none" stroke="#009bcf" stroke-width="2" stroke-linecap="round"><path d="M3 21h18M5 21V8l7-5 7 5v13M9 21v-6h6v6"/></svg></div>Fabricants</div>
+            <div class="node mid"><div class="c"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"><path d="M12 21s-7-4.5-7-11a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 6.5-7 11-7 11z"/></svg></div>Plateforme</div>
+            <div class="node"><div class="c"><svg viewBox="0 0 24 24" fill="none" stroke="#b944b1" stroke-width="2" stroke-linecap="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 10h18M7 15h4"/></svg></div>Assurance Maladie</div>
+          </div>
+        </div>
+        <div class="txt"><span class="tag">Santé · Strateg.in</span><h3>Plateforme de données médicales</h3><p>Conçue de A à Z en binôme avec le lead dev : transmission sécurisée des données d'implants cardiaques entre fabricants, praticiens et Assurance Maladie.</p><div class="tech"><span>HDS</span><span>RGPD</span><span>Next.js</span><span>Node.js</span></div></div>
+      </article>
+      <article class="pj reveal">
+        <div class="vis">
+          <div class="dash"><div class="side"><i></i><i></i><i></i><i></i><i></i></div>
+            <div class="main"><div class="kpi">Devis<b>128</b></div><div class="kpi">CA du mois<b>42 k€</b></div><div class="kpi">Retards<b>3</b></div>
+              <div class="chart"><i style="height:40%"></i><i style="height:62%"></i><i style="height:48%"></i><i style="height:80%"></i><i style="height:66%"></i><i style="height:92%"></i><i style="height:74%"></i></div>
+              <div class="list"><i></i><i></i><i></i><i></i><i></i></div></div></div>
+        </div>
+        <div class="txt"><span class="tag">ERP · Assurance et santé</span><h3>Logiciels de gestion sur mesure</h3><p>ERP pour des clients de l'assurance et de la santé, puis Logik, un logiciel pour créer ses propres outils de gestion sans coder.</p><div class="tech"><span>TypeScript</span><span>React</span><span>Prisma</span><span>CI/CD</span></div></div>
+      </article>
+      <article class="pj reveal">
+        <div class="vis">
+          <div class="chat">
+            <div class="msg u">Ajoute une colonne « date de relance » au tableau des clients</div>
+            <div class="msg a">C'est fait. J'ai aussi créé un filtre « à relancer cette semaine ».</div>
+            <div class="typing"><i></i><i></i><i></i></div>
+          </div>
+        </div>
+        <div class="txt"><span class="tag">Intelligence artificielle</span><h3>Assistant IA intégré à un logiciel</h3><p>Un assistant qui modifie l'application en langage naturel : données, pages, widgets. Le genre d'outil qui fait gagner des heures chaque semaine.</p><div class="tech"><span>APIs LLM</span><span>Agents</span><span>Node.js</span></div></div>
+      </article>
+      <article class="pj reveal">
+        <div class="vis">
+          <div class="phones">
+            <div class="phone"><div class="scr"><div class="scan">SCANNER</div><div class="row"></div><div class="row"></div><div class="bt"></div></div></div>
+            <div class="phone p2"><div class="scr"><div class="row"></div><div class="row"></div><div class="row"></div><div class="row"></div><div class="bt"></div></div></div>
+          </div>
+        </div>
+        <div class="txt"><span class="tag">Mobile · Linkall</span><h3>Application mobile et facturation</h3><p>Numérisation de documents depuis le téléphone avec envoi automatique vers le cloud, couplée à un outil de facturation, de planning et de suivi.</p><div class="tech"><span>React Native</span><span>PHP</span><span>MySQL</span></div></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="apropos"><div class="wrap about">
+  <div class="about-photo reveal"><img src="./bryan.webp" alt="Portrait de Bryan Gast" loading="lazy" width="420" height="560"><div class="cap"><b>Bryan Gast</b><span>Développeur web et IA, Toulouse</span></div></div>
+  <div class="reveal">
+    <div class="kicker">À propos</div>
+    <h2 class="title">Un développeur, pas une agence<span class="us"> _</span></h2>
+    <p>Je m'appelle Bryan, j'ai 4 ans d'expérience en développement et un <strong>Master spécialisé en intelligence artificielle</strong> à Epitech Toulouse. J'ai travaillé sur des projets sensibles, comme une plateforme de données de santé, et des logiciels de gestion pour l'assurance.</p>
+    <p>Avec moi, <strong>vous parlez directement à celui qui code</strong>. Pas de commercial, pas de chef de projet intermédiaire : je comprends votre métier, je vous propose une solution simple, et je reste là après la livraison.</p>
+    <div class="timeline">
+      <div class="tl"><b>Strateg.in</b><em>2 ans 7 mois</em><span>Développeur full stack : plateforme médicale, ERP, assistant IA</span></div>
+      <div class="tl"><b>Linkall</b><em>1 an</em><span>Développeur full stack : application mobile et ERP de gestion</span></div>
+      <div class="tl"><b>Epitech Toulouse</b><em>Bac+5</em><span>Master expert en technologies de l'information, spécialité IA</span></div>
+    </div>
   </div>
 </div></section>
 
-<section id="methode"><div class="wrap">
-  <h2>Comment on travaille ensemble</h2>
-  <p class="sub">Simple, transparent, sans jargon.</p>
-  <div class="grid four steps">
-    <div class="card"><h3>Un échange gratuit</h3><p>20 minutes au téléphone ou autour d'un café à Toulouse pour comprendre votre besoin.</p></div>
-    <div class="card"><h3>Un devis forfaitaire</h3><p>Sous 48 heures : périmètre, délai et prix fixe. Vous savez exactement ce que vous payez.</p></div>
-    <div class="card"><h3>Des livraisons par étapes</h3><p>Vous voyez l'avancement régulièrement et vous ajustez en cours de route.</p></div>
-    <div class="card"><h3>Un accompagnement</h3><p>Prise en main, corrections et évolutions : je reste disponible après la livraison.</p></div>
+<section class="method"><div class="wrap">
+  <div class="reveal" style="text-align:center">
+    <div class="kicker">Méthode</div>
+    <h2 class="title">Comment on travaille ensemble<span class="us"> _</span></h2>
+  </div>
+  <div class="steps">
+    <div class="step reveal"><div class="n">1</div><h3>Un échange gratuit</h3><p>20 minutes au téléphone ou autour d'un café à Toulouse pour comprendre votre besoin.</p></div>
+    <div class="step reveal"><div class="n">2</div><h3>Un devis forfaitaire</h3><p>Sous 48 heures : périmètre, délai et prix fixe. Vous savez ce que vous payez.</p></div>
+    <div class="step reveal"><div class="n">3</div><h3>Des livraisons par étapes</h3><p>Vous voyez l'avancement régulièrement et vous ajustez en cours de route.</p></div>
+    <div class="step reveal"><div class="n">4</div><h3>Un accompagnement</h3><p>Prise en main, corrections et évolutions : je reste disponible après la livraison.</p></div>
   </div>
 </div></section>
 
 <section id="contact"><div class="wrap">
-  <div class="contact">
-    <h2>Parlons de votre projet</h2>
-    <p>Décrivez-moi en quelques lignes ce qui vous fait perdre du temps aujourd'hui. Je vous réponds sous 24 heures ouvrées.</p>
-    <div class="cta" style="justify-content:center">
-      <a class="btn" href="mailto:kaoutizoff@gmail.com?subject=Projet%20pour%20mon%20entreprise">kaoutizoff@gmail.com</a>
-      <a class="btn ghost" href="https://www.malt.fr/profile/bryangast" target="_blank" rel="noopener">Mon profil Malt</a>
+  <div class="cta-band reveal">
+    <div class="blob b1" style="width:380px;height:380px;right:-120px;top:-160px"></div><div class="blob b2" style="width:320px;height:320px;right:160px;bottom:-220px"></div>
+    <div>
+      <h2>Parlons de votre projet</h2>
+      <p>Dites-moi en quelques lignes ce qui vous fait perdre du temps aujourd'hui. Je vous réponds sous 24 heures ouvrées.</p>
+      <div class="cta">
+        <a class="btn btn-grad" href="mailto:kaoutizoff@gmail.com?subject=Projet%20pour%20mon%20entreprise">kaoutizoff@gmail.com</a>
+        <a class="btn btn-ghost" href="https://www.malt.fr/profile/bryangast" target="_blank" rel="noopener">Mon profil Malt</a>
+      </div>
     </div>
+    <img class="logo-big" src="./logo.webp" alt="" loading="lazy" width="260" height="259">
   </div>
 </div></section>
 </main>
 
 <footer><div class="wrap">
-  <div>© <span id="y">2026</span> kaoutiz.dev · Bryan Gast, développeur indépendant à Toulouse</div>
-  <div><a href="https://github.com/Kaoutiz" target="_blank" rel="noopener">GitHub</a></div>
-  <details style="width:100%"><summary>Mentions légales</summary>
+  <div class="row">
+    <a class="brand" href="#top"><img src="./logo.webp" alt="" width="30" height="30"><span style="font-weight:600;color:var(--ink)">kaoutiz.dev</span></a>
+    <div>© <span id="y">2026</span> Bryan Gast, développeur indépendant à Toulouse · <a href="https://github.com/Kaoutiz" target="_blank" rel="noopener">GitHub</a></div>
+  </div>
+  <details><summary>Mentions légales</summary>
     <div class="legal">Éditeur : Bryan Gast, entrepreneur individuel (nom commercial kaoutiz.dev), SIRET 979 451 986 00025, 134 allée de Barcelone, 31000 Toulouse. Contact : kaoutizoff@gmail.com. TVA non applicable, article 293 B du CGI. Directeur de la publication : Bryan Gast.<br>
     Hébergement : GitHub Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, États Unis.<br>
     Données personnelles : ce site ne dépose aucun cookie et ne collecte aucune donnée. Les emails que vous m'envoyez servent uniquement à vous répondre. Vous pouvez demander leur suppression à tout moment à kaoutizoff@gmail.com.</div>
   </details>
 </div></footer>
-<script>document.getElementById('y').textContent=new Date().getFullYear()</script>
+
+<script>
+document.getElementById('y').textContent=new Date().getFullYear();
+const h=document.querySelector('header');
+const onS=()=>h.classList.toggle('scrolled',scrollY>30);onS();addEventListener('scroll',onS,{passive:true});
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
 </body>
 </html>
